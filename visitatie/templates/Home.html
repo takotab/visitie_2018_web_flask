@@ -4,5 +4,5 @@
 {% block app_content %}
     <h1>Hi, {{ username }}</h1>
     <p>Hier start de Visitie druk op de knop hieronder om the beginnen:</p>
-    <button type="button" class="btn btn-primary btn-lg">Start Visitatie</button>
+    <button type="button" class="btn btn-primary btn-lg" href="{{ url_for('portal.form') }}">Start Visitatie</button>
 {% endblock %}
