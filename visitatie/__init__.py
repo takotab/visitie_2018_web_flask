@@ -2,10 +2,7 @@ import logging
 
 from flask_bootstrap import Bootstrap
 from flask import current_app, Flask, redirect, url_for, session
-from oauth2client.contrib.flask_util import UserOAuth2
-import httplib2
-import json
-from . import datastore
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
