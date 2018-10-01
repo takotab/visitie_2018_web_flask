@@ -1,11 +1,11 @@
 import logging
 
+from flask import Flask
 from flask_bootstrap import Bootstrap
-from flask import current_app, Flask, redirect, url_for, session
 from flask_login import LoginManager
-
-from flask_sqlalchemy import SQLAlchemy
+from flask_mail import Mail
 from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
 # from flask_login import LoginManager
 
@@ -14,11 +14,9 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 login = LoginManager()
 login.login_view = 'auth.login'
-login.login_message = ('Please log in to access this page.')
+login.login_message = ('U moet eerst inloggen om deze pagina te kunnen bezoeken.')
 migrate = Migrate()
-# login.login_view = 'login'
-# login.login_message = ('U moet eerst inloggen om deze pagina te kunnen bezoeken.')
-
+mail = Mail()
 
 def create_app(config, debug = False, testing = False, config_overrides = None):
     app = Flask(__name__)
@@ -40,6 +38,7 @@ def create_app(config, debug = False, testing = False, config_overrides = None):
     bootstrap.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    mail.init_app(app)
 
     # Register the Profile CRUD blueprint.
     from .routes import bp
