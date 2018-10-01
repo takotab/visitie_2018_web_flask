@@ -15,24 +15,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('portal.index') }}">Start</a>
+                <a class="navbar-brand" href="{{ url_for('auth.index') }}">Start</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('portal.index') }}">{{ ('Home') }}</a></li>
-                    {#                    <li><a href="{{ url_for('portal.form') }}">{{ Explore }}</a></li>#}
+                    <li><a href="{{ url_for('auth.index') }}">{{ ('Home') }}</a></li>
+                    {#                    <li><a href="{{ url_for('form') }}">{{ Explore }}</a></li>#}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    {% if session.profile %}
-                        <a href="/logout">
-                            {% if session.profile.image %}
-                                <img class="img-circle" src="{{ session.profile.image.url }}" width="24">
-                            {% endif %}
-                            {{ session.profile.displayName }}
-                        </a>
+                    <li>
+                    {% if current_user.is_anonymous %}
+                        <a href="{{ url_for('auth.login') }}">Login</a>
                     {% else %}
-                        <a href="/oauth2authorize">Login</a>
+                        <a href="{{ url_for('auth.logout') }}">Logout</a>
                     {% endif %}
+                    </li>
                 </ul>
             </div>
         </div>

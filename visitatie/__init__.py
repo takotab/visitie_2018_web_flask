@@ -2,19 +2,20 @@ import logging
 
 from flask_bootstrap import Bootstrap
 from flask import current_app, Flask, redirect, url_for, session
+from flask_login import LoginManager
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
 # from flask_login import LoginManager
 
-oauth2 = UserOAuth2()
+# oauth2 = UserOAuth2()
 bootstrap = Bootstrap()
 db = SQLAlchemy()
+login = LoginManager()
+login.login_view = 'auth.login'
+login.login_message = ('Please log in to access this page.')
 migrate = Migrate()
-
-
-# login = LoginManager()
 # login.login_view = 'login'
 # login.login_message = ('U moet eerst inloggen om deze pagina te kunnen bezoeken.')
 
@@ -35,13 +36,13 @@ def create_app(config, debug = False, testing = False, config_overrides = None):
 
     # Setup the data model.
 
+    login.init_app(app)
     bootstrap.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
-    # login.init_app(app)
 
     # Register the Profile CRUD blueprint.
-    from .portal import bp
+    from .routes import bp
     app.register_blueprint(bp, url_prefix = '/')
 
     # Add a default root route.
