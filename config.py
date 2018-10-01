@@ -15,3 +15,4 @@ MAIL_PORT = 587
 MAIL_USE_TLS = 1
 MAIL_USERNAME = "visitatiecommissiealkmaar@gmail.com"
 MAIL_PASSWORD = "o0LleL2mbsXa3"
+ADMINS = ["visitatiecommissiealkmaar@gmail.com"]
