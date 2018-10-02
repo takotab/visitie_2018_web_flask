@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="you can now register">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/add_user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db cheatsheet.txt" afterDir="false" />
+    <list default="true" id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="making it work at IMEC and some start w/ adding users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/base.html" afterDir="false" />
+    </list>
+    <list id="4bedc3e4-cd55-447c-ba5b-00d5fbbcb70b" name="making it work at IMEC and some start w/ adding users" comment="">
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,32 +29,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gitignore" value="1" />
-          <entry key="py" value="5" />
+          <entry key="gitignore" value="2" />
+          <entry key="py" value="8" />
           <entry key="txt" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Git file" value="1" />
+          <entry key="Git file" value="2" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="8" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="128" />
-          <entry key="txt" value="3" />
+          <entry key="py" value="183" />
+          <entry key="txt" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="128" />
+          <entry key="PLAIN_TEXT" value="60" />
+          <entry key="Python" value="183" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
     <session id="-1279596763">
       <usages-collector id="statistics.lifecycle.project">
@@ -117,14 +117,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/add_user.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/visitatie/add_user.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+                <state relative-caret-position="289">
+                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                   <folding>
-                    <marker date="1538463607218" expanded="true" signature="143:298" ph="..." />
+                    <marker date="1538463691570" expanded="true" signature="197:352" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="348">
+                  <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
                 </state>
               </provider>
             </entry>
@@ -186,8 +195,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+                <state relative-caret-position="442">
+                  <caret line="26" column="56" lean-forward="true" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
                 </state>
               </provider>
             </entry>
@@ -251,10 +260,10 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Tako Tabak &lt;tako.tabak@imec-nl.nl&gt;" />
         <option value="tako_viao" />
         <option value="tako.tabak@gmail.com" />
         <option value="tako_desktop &lt;takotako@gmail.com&gt;" />
-        <option value="Tako Tabak &lt;tako.tabak@imec-nl.nl&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -292,6 +301,7 @@
         <option value="$PROJECT_DIR$/db cheatsheet.txt" />
         <option value="$PROJECT_DIR$/visitatie/templates/base.html" />
         <option value="$PROJECT_DIR$/add_user.py" />
+        <option value="$PROJECT_DIR$/visitatie/add_user.py" />
       </list>
     </option>
   </component>
@@ -351,6 +361,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -360,6 +371,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tabak98\PycharmProjects\visitie_2018\visitatie" />
       <recent name="$PROJECT_DIR$/visitatie" />
     </key>
   </component>
@@ -432,6 +444,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="" />
+      <changelist id="4bedc3e4-cd55-447c-ba5b-00d5fbbcb70b" name="making it work at IMEC and some start w/ adding users" comment="" />
       <created>1537800637062</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -451,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538234328222</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="making it work at IMEC and some start w/ adding users">
+      <created>1538463721115</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538463721116</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -464,12 +484,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991772" visible="true" weight="0.23237886" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991772" weight="0.23237886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.18502203" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" weight="0.29295155" />
       <window_info anchor="bottom" id="Python Console" order="11" />
@@ -540,7 +560,8 @@
     <MESSAGE value="inital start w/ a start page" />
     <MESSAGE value="stopped w/ app engine now just gonna do it on linode" />
     <MESSAGE value="you can now register" />
-    <option name="LAST_COMMIT_MESSAGE" value="you can now register" />
+    <MESSAGE value="making it work at IMEC and some start w/ adding users" />
+    <option name="LAST_COMMIT_MESSAGE" value="making it work at IMEC and some start w/ adding users" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database_start.xml">
@@ -551,13 +572,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/jinja2/environment.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/app.py" />
     <entry file="file://$PROJECT_DIR$/app.yaml" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/oauth2client/contrib/flask_util.py" />
@@ -573,13 +587,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -677,13 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
@@ -712,13 +712,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/add_user.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/globals.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="351">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/add_user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <marker date="1538463607218" expanded="true" signature="143:298" ph="..." />
+            <marker date="1538463691570" expanded="true" signature="197:352" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
