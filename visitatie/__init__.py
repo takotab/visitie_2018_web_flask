@@ -1,5 +1,5 @@
 import logging
-
+import click
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
@@ -18,7 +18,8 @@ login.login_message = ('U moet eerst inloggen om deze pagina te kunnen bezoeken.
 migrate = Migrate()
 mail = Mail()
 
-def create_app(config, debug = False, testing = False, config_overrides = None):
+
+def create_app(config, debug = False, testing = False, config_overrides = None, users = []):
     app = Flask(__name__)
     app.config.from_object(config)
 
@@ -59,4 +60,15 @@ def create_app(config, debug = False, testing = False, config_overrides = None):
         See logs for full stacktrace.
         """.format(e), 500
 
+    with app.app_context():
+        for user in users:
+            from visitatie.data_models import User
+            print(user)
+            u = User(username = user,
+                     email = 'susan@example.com',
+                     password_hash = "password_hash",
+                     )
+            db.session.add(u)
+            db.session.commit()
+        print(User.query.all())
     return app
