@@ -4,11 +4,9 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, Selec
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
 
 from visitatie.data_models import User
+from visitatie.praktijk import Praktijk
 
-PRAKTIJKEN = [
-    (u'1', u'Mensendieck Castricum'),
-    (u'2', u'Fysio Duckstad')
-    ]
+PRAKTIJK = Praktijk()
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators = [DataRequired()])
@@ -20,7 +18,7 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators = [DataRequired()])
     email = StringField('Email', validators = [DataRequired(), Email()])
-    praktijk = SelectField('Praktijk', choices = PRAKTIJKEN,
+    praktijk = SelectField('Praktijk', choices = PRAKTIJK.get_tuple(),
                            validators = [DataRequired()])
     password = PasswordField('Password', validators = [DataRequired()])
     password2 = PasswordField(

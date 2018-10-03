@@ -4,7 +4,7 @@
 {% block app_content %}
     <h1>Profiel informatie:</h1>
     <p>Naam: {{ user.username }}</p>
-    <p>Praktijk: {{ user.get_praktijk }}</p>
+    <p>Praktijk: {{ user.get_praktijk() }}</p>
     <p>Email: {{ user.email }}</p>
-    <p>Klopt er iets niet? <a href="{{ url_for('auth.register') }}">Klik hier om uw profiel te wijzigen.!</a></p>
+    <p>Klopt er iets niet? <a href="{{ url_for('auth.register') }}">Klik hier om uw profiel te wijzigen.</a></p>
 {% endblock %}
