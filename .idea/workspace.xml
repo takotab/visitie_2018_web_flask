@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/praktijken.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visitatie/praktijk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6526661b5352_changed_praktijk.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/a11e2c4d53fc_added_password_again.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/visitatie/data_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/data_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visitatie/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visitatie/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visitatie/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visitatie/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visitatie/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/user.html" afterDir="false" />
     </list>
     <list id="4bedc3e4-cd55-447c-ba5b-00d5fbbcb70b" name="making it work at IMEC and some start w/ adding users" comment="" />
@@ -19,7 +25,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/visitie_2018$make_users.coverage" NAME="make_users Coverage Results" MODIFIED="1538481162635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/visitie_2018$visitie_2018_main.coverage" NAME="visitie_2018 main Coverage Results" MODIFIED="1538559947991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/visitie_2018$visitie_2018_main.coverage" NAME="visitie_2018 main Coverage Results" MODIFIED="1538572424312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/visitie_2018$add_user__1_.coverage" NAME="add_user (1) Coverage Results" MODIFIED="1538479073488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/visitatie" />
     <SUITE FILE_PATH="coverage/visitie_2018$add_user.coverage" NAME="add_user Coverage Results" MODIFIED="1538463619674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/visitie_2018$visitie_2018.coverage" NAME="visitie_2018 main Coverage Results" MODIFIED="1538234662309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -53,20 +59,20 @@
         <counts>
           <entry key="flaskenv" value="1" />
           <entry key="gitignore" value="2" />
-          <entry key="html" value="5" />
+          <entry key="html" value="6" />
           <entry key="json" value="1" />
-          <entry key="py" value="30" />
-          <entry key="txt" value="4" />
+          <entry key="py" value="31" />
+          <entry key="txt" value="5" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Git file" value="2" />
-          <entry key="HTML" value="5" />
+          <entry key="HTML" value="6" />
           <entry key="JSON" value="1" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="30" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="31" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -74,19 +80,19 @@
         <counts>
           <entry key="flaskenv" value="12" />
           <entry key="gitignore" value="5" />
-          <entry key="html" value="147" />
+          <entry key="html" value="161" />
           <entry key="json" value="29" />
-          <entry key="py" value="1290" />
-          <entry key="txt" value="123" />
+          <entry key="py" value="1426" />
+          <entry key="txt" value="221" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="5" />
-          <entry key="HTML" value="147" />
+          <entry key="HTML" value="161" />
           <entry key="JSON" value="29" />
-          <entry key="PLAIN_TEXT" value="135" />
-          <entry key="Python" value="1290" />
+          <entry key="PLAIN_TEXT" value="233" />
+          <entry key="Python" value="1426" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -139,7 +145,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5434929">
+    <splitter split-orientation="horizontal" split-proportion="0.44748026">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -190,20 +196,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/visitatie/routes.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-                  <folding>
-                    <marker date="1538560202459" expanded="true" signature="1145:1282" ph="..." />
-                  </folding>
+                <state relative-caret-position="306">
+                  <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="21" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -212,11 +206,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+                <state relative-caret-position="323">
+                  <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -224,8 +218,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="115" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="115" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
@@ -233,17 +227,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/forms.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="39" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/config.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="298">
+                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -251,26 +236,43 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/register.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/visitatie/templates/user.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+                <state relative-caret-position="51">
+                  <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/visitatie/templates/user.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/visitatie/templates/change_info.html">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/login.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="120" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="120" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+                  <folding>
+                    <marker date="1538572958385" expanded="true" signature="1138:1275" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -291,6 +293,7 @@
     <findStrings>
       <find>profiel</find>
       <find>url_for</find>
+      <find>username</find>
     </findStrings>
     <replaceStrings>
       <replace>portal</replace>
@@ -327,7 +330,6 @@
         <option value="$PROJECT_DIR$/visitatie/templates/reset_password.html" />
         <option value="$PROJECT_DIR$/visitatie/templates/email/reset_password.txt" />
         <option value="$PROJECT_DIR$/visitatie/templates/email/reset_password.html" />
-        <option value="$PROJECT_DIR$/visitatie/templates/login.html" />
         <option value="$PROJECT_DIR$/visitatie/email.py" />
         <option value="$PROJECT_DIR$/db cheatsheet.txt" />
         <option value="$PROJECT_DIR$/add_user.py" />
@@ -336,16 +338,17 @@
         <option value="$PROJECT_DIR$/.flaskenv" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/make_users.py" />
-        <option value="$PROJECT_DIR$/visitatie/templates/base.html" />
-        <option value="$PROJECT_DIR$/visitatie/templates/index.html" />
         <option value="$PROJECT_DIR$/visitatie/__init__.py" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/praktijken.json" />
-        <option value="$PROJECT_DIR$/visitatie/forms.py" />
         <option value="$PROJECT_DIR$/visitatie/praktijk.py" />
-        <option value="$PROJECT_DIR$/visitatie/templates/user.html" />
+        <option value="$PROJECT_DIR$/visitatie/templates/base.html" />
+        <option value="$PROJECT_DIR$/visitatie/templates/login.html" />
         <option value="$PROJECT_DIR$/visitatie/data_models.py" />
+        <option value="$PROJECT_DIR$/visitatie/forms.py" />
         <option value="$PROJECT_DIR$/visitatie/routes.py" />
+        <option value="$PROJECT_DIR$/visitatie/templates/index.html" />
+        <option value="$PROJECT_DIR$/visitatie/templates/user.html" />
       </list>
     </option>
   </component>
@@ -362,10 +365,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="51" />
-    <option name="y" value="27" />
-    <option name="width" value="935" />
-    <option name="height" value="1053" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -396,6 +398,12 @@
               <item name="visitie_2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="visitie_2018" type="462c0819:PsiDirectoryNode" />
               <item name="visitatie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="visitie_2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="visitie_2018" type="462c0819:PsiDirectoryNode" />
+              <item name="visitatie" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -570,27 +578,41 @@
       <option name="project" value="LOCAL" />
       <updated>1538556419407</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="praktijk now in praktijk json and seems to work">
+      <created>1538560350378</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538560350378</updated>
+    </task>
+    <task id="LOCAL-00006" summary="removed home part">
+      <created>1538560466692</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538560466692</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20948827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122068234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4991772" visible="true" weight="0.23237886" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4991772" weight="0.39977974" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.18502203" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" weight="0.29295155" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4989339" visible="true" weight="0.29295155" />
       <window_info anchor="bottom" id="Python Console" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5010661" side_tool="true" weight="0.29295155" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -661,7 +683,9 @@
     <MESSAGE value="you can now register" />
     <MESSAGE value="making it work at IMEC and some start w/ adding users" />
     <MESSAGE value="Now include a praktijk you can choice" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now include a praktijk you can choice" />
+    <MESSAGE value="praktijk now in praktijk json and seems to work" />
+    <MESSAGE value="removed home part" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed home part" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database_start.xml">
@@ -780,13 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db cheatsheet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/templates/form.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -819,41 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="115" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="120" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="120" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/praktijken.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -871,34 +853,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/forms.py">
+    <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="39" />
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/user.html">
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
           <folding>
-            <marker date="1538560202459" expanded="true" signature="1145:1282" ph="..." />
+            <marker date="1538572958385" expanded="true" signature="1138:1275" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/change_info.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db cheatsheet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="306">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
