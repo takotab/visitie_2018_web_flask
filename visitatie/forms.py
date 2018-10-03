@@ -1,9 +1,14 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from flask import current_app
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
 
 from visitatie.data_models import User
 
+PRAKTIJKEN = [
+    (u'1', u'Mensendieck Castricum'),
+    (u'2', u'Fysio Duckstad')
+    ]
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators = [DataRequired()])
@@ -15,6 +20,8 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators = [DataRequired()])
     email = StringField('Email', validators = [DataRequired(), Email()])
+    praktijk = SelectField('Praktijk', choices = PRAKTIJKEN,
+                           validators = [DataRequired()])
     password = PasswordField('Password', validators = [DataRequired()])
     password2 = PasswordField(
             'Repeat Password', validators = [DataRequired(), EqualTo('password')])

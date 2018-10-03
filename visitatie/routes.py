@@ -53,7 +53,9 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(username = form.username.data,
-                    email = form.email.data)
+                    email = form.email.data,
+                    praktijk = form.praktijk.data,
+                    )
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
@@ -62,15 +64,10 @@ def register():
     return render_template('register.html', title = 'Register', form = form)
 
 
-@bp.route('/user/<username>')
+@bp.route('/user')
 @login_required
-def user(username):
-    user = User.query.filter_by(username = username).first_or_404()
-    posts = [
-        {'author': user, 'body': 'Test post #1'},
-        {'author': user, 'body': 'Test post #2'}
-        ]
-    return render_template('user.html', user = user, posts = posts)
+def user():
+    return render_template('user.html', user = current_user)
 
 
 from visitatie.forms import ResetPasswordRequestForm
