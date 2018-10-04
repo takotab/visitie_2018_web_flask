@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="inital landing page to check info">
-      <change afterPath="$PROJECT_DIR$/visitatie/formulieren/froms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visitatie/formulieren/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/visitatie/templates/init_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="36243a16-e76e-463f-8b07-dc9774c52558" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/versions/60daf4046951_init_upgrade.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visitatie/data_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/data_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visitatie/templates/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visitatie/formulieren/froms.py" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/formulieren/froms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visitatie/templates/init_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/visitatie/templates/init_form.html" afterDir="false" />
     </list>
     <list id="4bedc3e4-cd55-447c-ba5b-00d5fbbcb70b" name="making it work at IMEC and some start w/ adding users" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,19 +73,19 @@
         <counts>
           <entry key="flaskenv" value="12" />
           <entry key="gitignore" value="5" />
-          <entry key="html" value="291" />
+          <entry key="html" value="323" />
           <entry key="json" value="29" />
-          <entry key="py" value="1872" />
-          <entry key="txt" value="316" />
+          <entry key="py" value="2007" />
+          <entry key="txt" value="339" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Git file" value="5" />
-          <entry key="HTML" value="291" />
+          <entry key="HTML" value="323" />
           <entry key="JSON" value="29" />
-          <entry key="PLAIN_TEXT" value="328" />
-          <entry key="Python" value="1872" />
+          <entry key="PLAIN_TEXT" value="351" />
+          <entry key="Python" value="2007" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -150,7 +138,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46256846">
+    <splitter split-orientation="horizontal" split-proportion="0.4071991">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -171,11 +159,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+                <state relative-caret-position="326">
+                  <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
                 </state>
               </provider>
             </entry>
@@ -189,11 +177,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/visitatie/formulieren/froms.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="102">
-                  <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+                  <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -220,7 +208,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
@@ -259,17 +247,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/visitatie/templates/init_form.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+                <state relative-caret-position="255">
+                  <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                <state relative-caret-position="340">
+                  <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
@@ -340,17 +328,17 @@
         <option value="$PROJECT_DIR$/visitatie/praktijk.py" />
         <option value="$PROJECT_DIR$/visitatie/templates/base.html" />
         <option value="$PROJECT_DIR$/visitatie/templates/login.html" />
-        <option value="$PROJECT_DIR$/visitatie/data_models.py" />
         <option value="$PROJECT_DIR$/visitatie/templates/user.html" />
         <option value="$PROJECT_DIR$/visitatie/forms.py" />
         <option value="$PROJECT_DIR$/visitatie/formulieren/templates/init_form.html" />
-        <option value="$PROJECT_DIR$/visitatie/templates/init_form.html" />
-        <option value="$PROJECT_DIR$/visitatie/formulieren/froms.py" />
         <option value="$PROJECT_DIR$/visitatie/formulieren/routes.py" />
         <option value="$PROJECT_DIR$/visitatie/__init__.py" />
         <option value="$PROJECT_DIR$/visitatie/routes.py" />
         <option value="$PROJECT_DIR$/visitatie/templates/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/visitatie/data_models.py" />
+        <option value="$PROJECT_DIR$/visitatie/formulieren/froms.py" />
+        <option value="$PROJECT_DIR$/visitatie/templates/init_form.html" />
       </list>
     </option>
   </component>
@@ -368,7 +356,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
+    <option name="width" value="795" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -602,14 +590,21 @@
       <option name="project" value="LOCAL" />
       <updated>1538573776936</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="inital landing page to check infot">
+      <created>1538658651136</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538658651136</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.124200426" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25426438" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -696,7 +691,8 @@
     <MESSAGE value="praktijk now in praktijk json and seems to work" />
     <MESSAGE value="removed home part" />
     <MESSAGE value="changed inlog method to email instead of username" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed inlog method to email instead of username" />
+    <MESSAGE value="inital landing page to check infot" />
+    <option name="LAST_COMMIT_MESSAGE" value="inital landing page to check infot" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/database_start.xml">
@@ -882,13 +878,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -896,24 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/formulieren/froms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/init_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="69" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -938,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/visitatie/routes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -952,10 +920,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="109" column="5" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
+        <state relative-caret-position="326">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/formulieren/froms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/templates/init_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitatie/data_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>

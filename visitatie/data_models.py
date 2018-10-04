@@ -17,6 +17,10 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     praktijk = db.Column(db.String(25), index = True)
 
+    # TODO add aantal therapeuten
+    # TODO add aantal therapeuten in edit_user
+    # TODO add bezoekende praktijk/therapeut
+
     def __repr__(self):
         return '<User {}>'.format(self.name)
 
