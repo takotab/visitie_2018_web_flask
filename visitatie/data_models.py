@@ -4,22 +4,21 @@ import jwt
 from flask import current_app
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from visitatie.praktijk import Praktijk
 from visitatie import db, login
 
 PRAKTIJK = Praktijk()
 
 class User(UserMixin, db.Model):
+
     id = db.Column(db.Integer, primary_key = True)
-    username = db.Column(db.String(64), index = True, unique = True)
+    name = db.Column(db.String(120), index = True, unique = True)
     email = db.Column(db.String(120), index = True, unique = True)
     password_hash = db.Column(db.String(128))
-
-    # praktijk_name = db.Column(db.Integer, db.ForeignKey('praktijk.name'))
-    # praktijk_password = db.Column(db.Integer, db.ForeignKey('praktijk.password_hash'))
+    praktijk = db.Column(db.String(25), index = True)
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return '<User {}>'.format(self.name)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -46,6 +45,7 @@ class User(UserMixin, db.Model):
         except:
             return
         return User.query.get(id)
+
 
 @login.user_loader
 def load_user(id):

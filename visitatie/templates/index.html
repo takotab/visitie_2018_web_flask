@@ -4,5 +4,9 @@
 {% block app_content %}
     <h1> Hi {{ current_user.name }}!</h1>
     <p>Hier start de Visitie druk op de knop hieronder om the beginnen:</p>
-    <button type="button" class="btn btn-primary btn-lg" href="{{ url_for('auth.form') }}">Start Visitatie</button>
+    <a href="{{ url_for('forms.init_form') }}">
+        <button type="button" class="btn btn-primary btn-lg">Start
+            Visitatie
+        </button>
+    </a>
 {% endblock %}

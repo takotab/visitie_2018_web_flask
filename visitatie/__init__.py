@@ -43,6 +43,8 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
     # Register the Profile CRUD blueprint.
     from .routes import bp
     app.register_blueprint(bp, url_prefix = '/')
+    from visitatie.formulieren.routes import bp as form_bp
+    app.register_blueprint(form_bp, url_prefix = '/')
 
     @app.errorhandler(500)
     def server_error(e):

@@ -1,8 +1,8 @@
-"""init upgrade
+"""initial thing
 
-Revision ID: 60daf4046951
+Revision ID: 5510e6e50953
 Revises: 
-Create Date: 2018-10-03 15:26:11.139940
+Create Date: 2018-10-04 14:23:19.205791
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '60daf4046951'
+revision = '5510e6e50953'
 down_revision = None
 branch_labels = None
 depends_on = None

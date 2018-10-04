@@ -16,22 +16,18 @@ class LoginForm(FlaskForm):
 
 
 class ChangeInfoForm(FlaskForm):
-    username = StringField('Username', validators = [DataRequired()])
+    name = StringField('Volledige naam', validators = [DataRequired()])
     email = StringField('Email', validators = [Email(), DataRequired()])
+    praktijk = SelectField('Praktijk', choices = PRAKTIJK.get_tuple(),
+                           validators = [DataRequired()])
     submit = SubmitField('Submit')
-
-    def validate_username(self, username):
-        user = User.query.filter_by(username = username.data).first()
-        if user.username == username.data:
-            print(user.username, username.data)
-        else:
-            if user is not None:
-                raise ValidationError('Gebruik alstublieft een ander username.')
 
     def validate_email(self, email):
         user = User.query.filter_by(email = email.data).first()
-        if user is not None:
-            raise ValidationError('Gebruik alstublieft een ander email-adres.')
+
+        if not user.email == email.data:
+            if user is not None:
+                raise ValidationError('Gebruik alstublieft een ander email-adres.')
 
 class RegistrationForm(FlaskForm):
     name = StringField('Volledige naam', validators = [DataRequired()])

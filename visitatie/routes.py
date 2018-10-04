@@ -11,15 +11,8 @@ bp = Blueprint("auth", __name__)
 
 @bp.route('/')
 @bp.route('/index')
-@login_required
 def index():
     return render_template("index.html", title = 'Home Page')
-
-
-@bp.route("/form")
-def form():
-    return render_template(
-            "form.html", username = 'Divera')
 
 
 @bp.route('/login', methods = ['GET', 'POST'])
@@ -78,14 +71,16 @@ from visitatie.forms import ChangeInfoForm
 def change_info():
     form = ChangeInfoForm()
     if form.validate_on_submit():
-        current_user.username = form.username.data
+        current_user.name = form.name.data
         current_user.email = form.email.data
+        current_user.praktijk = form.praktijk.data
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('auth.user'))
     elif request.method == 'GET':
-        form.username.data = current_user.username
+        form.name.data = current_user.name
         form.email.data = current_user.email
+        form.praktijk.data = current_user.praktijk
     return render_template('change_info.html', title = 'Wijzig Profiel',
                            form = form)
 
