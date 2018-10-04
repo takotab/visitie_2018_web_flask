@@ -60,7 +60,7 @@ def register():
 @bp.route('/user')
 @login_required
 def user():
-    return render_template('user.html', user = current_user)
+    return render_template('user.html', user = current_user, your_list = [])
 
 
 from visitatie.forms import ChangeInfoForm

@@ -7,6 +7,7 @@ from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
+# TODO add tests http://flask.pocoo.org/docs/1.0/tutorial/tests/
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
