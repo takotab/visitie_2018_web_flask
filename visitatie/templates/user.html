@@ -1,14 +1,10 @@
 {% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
 
-
 {% block app_content %}
-    <h1>username: {{ user.username }}!</h1>
-    {#    <h2>email: {{ user.email }}</h2>#}
-    {#    {% if user.praktijk %}#}
-    {#        <h2>Praktijk: {{ user.praktijk }}</h2>#}
-    {#    {% endif %}#}
-    <button type="button" class="btn btn-primary btn" href="{{ url_for('auth.change_info') }}">Wijzig profiel
-        informatie
-    </button>
+    <h1>Profiel informatie:</h1>
+    <p>Naam: {{ user.name }}</p>
+    <p>Praktijk: {{ user.get_praktijk() }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Klopt er iets niet? <a href="{{ url_for('auth.register') }}">Klik hier om uw profiel te wijzigen.</a></p>
 {% endblock %}

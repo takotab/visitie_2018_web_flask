@@ -7,6 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from visitatie import db, login
 
+PRAKTIJK = Praktijk()
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key = True)
@@ -30,6 +31,12 @@ class User(UserMixin, db.Model):
         return jwt.encode(
                 {'reset_password': self.id, 'exp': time() + expires_in},
                 current_app.config['SECRET_KEY'], algorithm = 'HS256').decode('utf-8')
+
+    def get_praktijk(self):
+        if self.praktijk in PRAKTIJK.dct:
+            return PRAKTIJK.dct[self.praktijk]
+        else:
+            return 'Anders'
 
     @staticmethod
     def verify_reset_password_token(token):
