@@ -3,7 +3,8 @@ import config
 
 
 def main():
-    app = create_app(config, users = ['123', 'tako234'])
+    lst_of_users = [('takotabak' + str(i), 'takotabak_' + str(i)) for i in range(5)]
+    app = create_app(config, users = lst_of_users)
 
 
 if __name__ == '__main__':

@@ -19,7 +19,8 @@ migrate = Migrate()
 mail = Mail()
 
 
-def create_app(config, debug = False, testing = False, config_overrides = None, users = []):
+def create_app(config, debug = False, testing = False, config_overrides = None,
+               users = []):
     app = Flask(__name__)
     app.config.from_object(config)
 
@@ -61,14 +62,13 @@ def create_app(config, debug = False, testing = False, config_overrides = None, 
         """.format(e), 500
 
     with app.app_context():
-        for user in users:
-            from visitatie.data_models import User
-            print(user)
+        from visitatie.data_models import User
+        for user, password in users:
             u = User(username = user,
-                     email = 'susan@example.com',
-                     password_hash = "password_hash",
                      )
+            u.set_password(password)
             db.session.add(u)
-            db.session.commit()
+        db.session.commit()
         print(User.query.all())
+
     return app

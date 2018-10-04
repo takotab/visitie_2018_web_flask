@@ -62,16 +62,30 @@ def register():
     return render_template('register.html', title = 'Register', form = form)
 
 
-@bp.route('/user/<username>')
+@bp.route('/user')
 @login_required
-def user(username):
-    user = User.query.filter_by(username = username).first_or_404()
-    posts = [
-        {'author': user, 'body': 'Test post #1'},
-        {'author': user, 'body': 'Test post #2'}
-        ]
-    return render_template('user.html', user = user, posts = posts)
+def user():
+    return render_template('user.html', user = current_user)
 
+
+from visitatie.forms import ChangeInfoForm
+
+
+@bp.route('/change_info', methods = ['GET', 'POST'])
+@login_required
+def change_info():
+    form = ChangeInfoForm()
+    if form.validate_on_submit():
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('auth.user'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    return render_template('change_info.html', title = 'Wijzig Profiel',
+                           form = form)
 
 from visitatie.forms import ResetPasswordRequestForm
 from visitatie.email import send_password_reset_email

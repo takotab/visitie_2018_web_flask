@@ -8,16 +8,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from visitatie import db, login
 
 
-# class Praktijk(db.Model):
-#     id = db.Column(db.Integer, primary_key = True)
-#     name = db.Column(db.String(64), index = True, unique = True)
-#     password_hash = db.Column(db.String(128))
-#     users = db.relationship('User', backref = 'author', lazy = 'dynamic')
-#
-#     def __repr__(self):
-#         return '<Praktijk {}>'.format(self.body)
-
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.String(64), index = True, unique = True)

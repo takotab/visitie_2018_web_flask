@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+
+{% block app_content %}
+    <h1>username: {{ user.username }}!</h1>
+    {#    <h2>email: {{ user.email }}</h2>#}
+    {#    {% if user.praktijk %}#}
+    {#        <h2>Praktijk: {{ user.praktijk }}</h2>#}
+    {#    {% endif %}#}
+    <button type="button" class="btn btn-primary btn" href="{{ url_for('auth.change_info') }}">Wijzig profiel
+        informatie
+    </button>
+{% endblock %}
