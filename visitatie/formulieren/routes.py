@@ -14,8 +14,17 @@ bp = Blueprint("forms", __name__)
 def init_form():
     form = GegevensCheck()
     if form.validate_on_submit():
+        if not current_user.check_password(form.ww_current_user.data):
+            flash("Uw eigen wachtwoord is fout.")
+
+        bezoekende_user = User.query.filter_by(Praktijk = current_user.bezoekende_praktijk).first()
+
+        if not bezoekende_user.check_password(form.ww_bezoekende.data):
+            flash("Het wachtword van de bezoekende praktijk is fout.")
+
         if form.alles_klopt.data:
             return redirect(url_for('auth.user'))
+
         else:
             flash("Uw moet de gegevens bevestigen of wijzigen.")
 

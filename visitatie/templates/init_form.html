@@ -4,12 +4,19 @@
 {% block app_content %}
     <h1>Gegevens check</h1>
 
-    <h1>Profiel informatie:</h1>
+    <h2>Profiel informatie:</h2>
     <p>Naam: {{ user.name }}</p>
     <p>Praktijk: {{ user.get_praktijk() }}</p>
     <p>Email: {{ user.email }}</p>
-    {#    #TODO add bezoekende praktijk#}
-    <p>Klopt er iets niet? <a href="{{ url_for('auth.change_info') }}">Klik hier om uw profiel te wijzigen.</a></p>
+    <p>U word bezocht door: {{ user.get_bezoekende_praktijk() }}</p>
+    <p>Klopt er iets niet?
+        <a href="{{ url_for('auth.change_info') }}">
+            Klik hier om uw profiel te wijzigen.
+        </a>
+    </p>
+    <p></p>
+    <h2>Wachtwoorden:</h2>
+
     <p></p>
     <div class="col-md-4">
         {{ wtf.quick_form(form) }}
