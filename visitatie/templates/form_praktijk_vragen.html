@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>{{ title }}</h1>
+    <form>
+        <div class="form-group">
+            {% for i, question in your_questions %}
+                <li class="list-group-item">
+                    <p>{{ question }} </p>
+                    <select class="form-control" name={{ "Select" + i }}>
+                        <option>Aanwezig</option>
+                        <option>Niet Aanwezig</option>
+                        <option>Niet van toepassing</option>
+                    </select>
+                </li>
+            {% endfor %}
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
