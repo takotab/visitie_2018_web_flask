@@ -6,6 +6,10 @@
     <p>Naam: {{ user.name }}</p>
     <p>Praktijk: {{ user.get_praktijk() }}</p>
     <p>Email: {{ user.email }}</p>
+    {% if not user.get_bezoekende_praktijk() == 'Onbekend' %}
+        <p>U word bezoekt door: {{ user.get_bezoekende_praktijk() }}</p>
+        <p>U gaat {{ user.get_te_bezoeken_praktijk() }} bezoeken.</p>
+    {% endif %}
     <p>Klopt er iets niet? <a href="{{ url_for('auth.change_info') }}">Klik hier om uw profiel te wijzigen.</a></p>
     {% for your_list_element in your_list %}
         <p>{{ your_list_element }} </p>

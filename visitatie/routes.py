@@ -74,6 +74,7 @@ def change_info():
         current_user.name = form.name.data
         current_user.email = form.email.data
         current_user.praktijk = form.praktijk.data
+        current_user.num_therapeuten = form.num_therapeuten.data
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('auth.user'))
@@ -81,6 +82,7 @@ def change_info():
         form.name.data = current_user.name
         form.email.data = current_user.email
         form.praktijk.data = current_user.praktijk
+        form.num_therapeuten.data = current_user.num_therapeuten
     return render_template('change_info.html', title = 'Wijzig Profiel',
                            form = form)
 

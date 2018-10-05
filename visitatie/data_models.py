@@ -9,6 +9,7 @@ from visitatie import db, login
 
 PRAKTIJK = Praktijk()
 
+
 class User(UserMixin, db.Model):
 
     id = db.Column(db.Integer, primary_key = True)
@@ -16,10 +17,10 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(120), index = True, unique = True)
     password_hash = db.Column(db.String(128))
     praktijk = db.Column(db.String(25), index = True)
+    num_therapeuten = db.Column(db.Integer)
+    bezoekende_praktijk = db.Column(db.String(25), index = True, unique = True)
+    te_bezoeken_praktijk = db.Column(db.String(25), index = True, unique = True)
 
-    # TODO add aantal therapeuten
-    # TODO add aantal therapeuten in edit_user
-    # TODO add bezoekende praktijk/therapeut
 
     def __repr__(self):
         return '<User {}>'.format(self.name)
@@ -36,10 +37,13 @@ class User(UserMixin, db.Model):
                 current_app.config['SECRET_KEY'], algorithm = 'HS256').decode('utf-8')
 
     def get_praktijk(self):
-        if self.praktijk in PRAKTIJK.dct:
-            return PRAKTIJK.dct[self.praktijk]
-        else:
-            return 'Anders'
+        return get_praktijk(self.praktijk)
+
+    def get_bezoekende_praktijk(self):
+        return get_praktijk(self.bezoekende_praktijk)
+
+    def get_te_bezoeken_praktijk(self):
+        return get_praktijk(self.te_bezoeken_praktijk)
 
     @staticmethod
     def verify_reset_password_token(token):
@@ -54,3 +58,10 @@ class User(UserMixin, db.Model):
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+
+def get_praktijk(praktijk):
+    if praktijk in PRAKTIJK.dct:
+        return PRAKTIJK.dct[praktijk]
+    else:
+        return 'Onbekend'

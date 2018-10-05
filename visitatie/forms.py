@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask import current_app
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField, IntegerField
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
 
 from visitatie.data_models import User
@@ -20,7 +20,13 @@ class ChangeInfoForm(FlaskForm):
     email = StringField('Email', validators = [Email(), DataRequired()])
     praktijk = SelectField('Praktijk', choices = PRAKTIJK.get_tuple(),
                            validators = [DataRequired()])
+    num_therapeuten = IntegerField('Aantal Therapeuten', validators = [DataRequired()])
     submit = SubmitField('Submit')
+
+    def validate_num_therapeuten(self, num_therapeuten):
+        if int(num_therapeuten) < 1:
+            raise ValidationError('Kies een getal boven de 0.')
+
 
     def validate_email(self, email):
         user = User.query.filter_by(email = email.data).first()
