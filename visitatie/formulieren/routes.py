@@ -17,11 +17,11 @@ def init_form():
     if form.validate_on_submit():
         if not current_user.check_password(form.ww_current_user.data):
             flash("Uw eigen wachtwoord is fout.")
+            redirect(url_for('forms.init_form'))
 
-        bezoekende_user = User.query.filter_by(Praktijk = current_user.bezoekende_praktijk).first()
-
-        if not bezoekende_user.check_password(form.ww_bezoekende.data):
-            flash("Het wachtword van de bezoekende praktijk is fout.")
+        if not current_user.check_password_bezoekende_praktijk(form.ww_bezoekende.data):
+            flash("Het wachtwoord van de bezoekende praktijk is fout.")
+            redirect(url_for('forms.init_form'))
 
         if form.alles_klopt.data:
             return redirect(url_for('auth.user'))
@@ -29,7 +29,7 @@ def init_form():
         else:
             flash("Uw moet de gegevens bevestigen of wijzigen.")
 
-    return render_template("init_form.html",
+    return render_template("formulieren/init_form.html",
                            title = 'Gegevens check',
                            form = form,
                            user = current_user)
@@ -46,6 +46,6 @@ def form_praktijk_vragen():
         for i, line in enumerate(f):
             # print(line.replace('\n', ''))
             your_questions.append((str(i), line.replace('\n', '')))
-    return render_template("form_praktijk_vragen.html",
+    return render_template("formulieren/form_praktijk_vragen.html",
                            your_questions = your_questions,
                            title = "Praktijk vragen")

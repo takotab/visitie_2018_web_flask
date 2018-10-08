@@ -107,4 +107,4 @@ venv.bak/
 
 /venv/
 /config.py
-#*.db
+test*.db

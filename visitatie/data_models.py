@@ -45,6 +45,10 @@ class User(UserMixin, db.Model):
     def get_te_bezoeken_praktijk(self):
         return get_praktijk(self.te_bezoeken_praktijk)
 
+    def check_password_bezoekende_praktijk(self, password):
+        bezoekende_user = User.query.filter_by(Praktijk = self.bezoekende_praktijk).first()
+        return bezoekende_user.check_password(password)
+
     @staticmethod
     def verify_reset_password_token(token):
         try:
