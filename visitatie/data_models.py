@@ -23,7 +23,11 @@ class User(UserMixin, db.Model):
 
 
     def __repr__(self):
-        return '<User {}>'.format(self.name)
+        return '<Name {}\tEmail {}\tPraktijk {}\n' \
+               'Bezoekende_p {}\tte_bezoeken_p {}'.format(
+                self.name, self.email, self.praktijk,
+                self.bezoekende_praktijk, self.te_bezoeken_praktijk
+                )
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
