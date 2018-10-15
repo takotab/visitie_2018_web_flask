@@ -41,16 +41,18 @@ class User(UserMixin, db.Model):
                 current_app.config['SECRET_KEY'], algorithm = 'HS256').decode('utf-8')
 
     def get_praktijk(self):
-        return get_praktijk(self.praktijk)
+        return self.praktijk
 
     def get_bezoekende_praktijk(self):
-        return get_praktijk(self.bezoekende_praktijk)
+        return self.bezoekende_praktijk
 
     def get_te_bezoeken_praktijk(self):
-        return get_praktijk(self.te_bezoeken_praktijk)
+        return self.te_bezoeken_praktijk
 
     def check_password_bezoekende_praktijk(self, password):
-        bezoekende_user = User.query.filter_by(Praktijk = self.bezoekende_praktijk).first()
+        bezoekende_user = User.query.filter_by(praktijk = self.bezoekende_praktijk).first()
+        if bezoekende_user is None:
+            raise KeyError(self.bezoekende_praktijk + " not found")
         return bezoekende_user.check_password(password)
 
     @staticmethod
@@ -67,9 +69,8 @@ class User(UserMixin, db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
-
-def get_praktijk(praktijk):
-    if praktijk in PRAKTIJK.dct:
-        return PRAKTIJK.dct[praktijk]
-    else:
-        return 'Onbekend'
+# def get_praktijk(praktijk):
+#     if praktijk in PRAKTIJK.dct:
+#         return PRAKTIJK.dct[praktijk]
+#     else:
+#         return 'Onbekend'

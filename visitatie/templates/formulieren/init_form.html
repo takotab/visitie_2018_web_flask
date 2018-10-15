@@ -6,9 +6,9 @@
 
     <h2>Profiel informatie:</h2>
     <p>Naam: {{ user.name }}</p>
-    <p>Praktijk: {{ user.get_praktijk() }}</p>
+    <p>Praktijk: {{ user.praktijk }}</p>
     <p>Email: {{ user.email }}</p>
-    <p>U word bezocht door: {{ user.get_bezoekende_praktijk() }}</p>
+    <p>U word bezocht door: {{ user.bezoekende_praktijk }}</p>
     <p>Klopt er iets niet?
         <a href="{{ url_for('auth.change_info') }}">
             Klik hier om uw profiel te wijzigen.
@@ -19,6 +19,7 @@
 
     <p></p>
     <div class="col-md-4">
+        {#        TODO: add pictures #}
         {{ wtf.quick_form(form) }}
     </div>
 
