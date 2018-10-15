@@ -8,7 +8,7 @@ from visitatie.data_models import User
 from visitatie.formulieren.froms import GegevensCheck
 
 bp = Blueprint("forms", __name__)
-
+VRAGEN_DCT = {}
 
 @bp.route("/init_form", methods = ['GET', 'POST'])
 @login_required
@@ -24,7 +24,7 @@ def init_form():
             redirect(url_for('forms.init_form'))
 
         if form.alles_klopt.data:
-            return redirect(url_for('auth.user'))
+            return redirect(url_for('forms.form_vragen/praktijk/0'))
 
         else:
             flash("Uw moet de gegevens bevestigen of wijzigen.")
@@ -35,17 +35,37 @@ def init_form():
                            user = current_user)
 
 
-@bp.route("/form_praktijk_vragen", methods = ['GET', 'POST'])
-@login_required
-def form_praktijk_vragen():
-    for key in request.args.keys():
-        print(key, request.args.get(key))
-
-    your_questions = []
-    with open('praktijkvragen.txt', 'r', encoding = 'UTF-8') as f:
+def your_questions(file = 'praktijkvragen.txt'):
+    if file in VRAGEN_DCT:
+        return VRAGEN_DCT[file]
+    questions = []
+    with open(file, 'r', encoding = 'UTF-8') as f:
         for i, line in enumerate(f):
             # print(line.replace('\n', ''))
-            your_questions.append((str(i), line.replace('\n', '')))
+            questions.append((str(i), line.replace('\n', '')))
+
+    VRAGEN_DCT[file] = questions
+
+    return questions
+
+
+@bp.route("/form_vragen/<type>/<number>", methods = ['GET', 'POST'])
+@login_required
+def form_praktijk_vragen(type, number):
+    for key in request.args.keys():
+        print(key, request.args.get(key))
+        # TODO handel data
+
+    if type == "praktijk":
+        questions = your_questions(file = 'praktijkvragen.txt')
+        title = "Praktijk vragen"
+    elif type == "patient":
+        questions = your_questions(file = 'patientvragen.txt')
+        title = "Patient " + str(number) + " vragen"
+    else:
+        flash("Something has gone wrong. Your data should be save.")
+        return redirect("forms/init_form")
+
     return render_template("formulieren/form_praktijk_vragen.html",
-                           your_questions = your_questions,
-                           title = "Praktijk vragen")
+                           your_questions = questions,
+                           title = title)
