@@ -13,6 +13,9 @@ VRAGEN_DCT = {}
 @bp.route("/init_form", methods = ['GET', 'POST'])
 @login_required
 def init_form():
+    print('load', list(request.args.keys()))
+    for key in request.args.keys():
+        print(key, request.args.get(key))
     form = GegevensCheck()
     if form.validate_on_submit():
         if not current_user.check_password(form.ww_current_user.data):
