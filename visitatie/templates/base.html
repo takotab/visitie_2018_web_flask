@@ -15,15 +15,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('auth.index') }}">Start</a>
+                <a class="navbar-brand" href="{{ url_for('auth.index') }}">
+                    <img src='image/Logorugnetwerk_small.png' class="img-fluid" height="35px"
+                         alt='Start'>
+                </a>
+
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
 
                     {% if not current_user.is_anonymous %}
                         <li><a href="{{ url_for('auth.user') }}">{{ ("Profiel") }}</a></li>
+
                     {% endif %}
+
                 </ul>
+                {#                <ul class="nav navbar-nav navbar-center">#}
+                {#                    <li>#}
+                {#                        <div>#}
+                {##}
+                {#                        </div>#}
+                {#                    </li>#}
+                {#                </ul>#}
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                     {% if current_user.is_anonymous %}
@@ -50,10 +63,17 @@
 
         {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <img src='image/Logorugnetwerk_small.jpg' alt='Logorugnetwerk'>
-            </div>
-        </div>
-    </div>
+        {##}
+        {#        <div></div>#}
+        {#        <div></div>#}
+        {#        <div class="fixed-bottom">#}
+        {#            <nav aria-label="breadcrumb">#}
+        {#                <ol class="breadcrumb">#}
+        {##}
+        {##}
+        {#                </ol>#}
+        {#            </nav>#}
+        {##}
+        {#        </div>#}
+
 {% endblock %}
