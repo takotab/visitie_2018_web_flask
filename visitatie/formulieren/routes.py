@@ -17,20 +17,19 @@ def init_form():
     for key in request.args.keys():
         print(key, request.args.get(key))
     form = GegevensCheck()
-    if form.validate_on_submit():
-        if not current_user.check_password(form.ww_current_user.data):
-            flash("Uw eigen wachtwoord is fout.")
-            redirect(url_for('forms.init_form'))
-
-        if not current_user.check_password_bezoekende_praktijk(form.ww_bezoekende.data):
-            flash("Het wachtwoord van de bezoekende praktijk is fout.")
-            redirect(url_for('forms.init_form'))
-
-        if form.alles_klopt.data:
-            return redirect(url_for('forms.form_vragen/praktijk/0'))
-
-        else:
-            flash("Uw moet de gegevens bevestigen of wijzigen.")
+    # if form.validate_on_submit():
+    #     if not current_user.check_password(form.ww_current_user.data):
+    #         flash("Uw eigen wachtwoord is fout.")
+    #         redirect(url_for('forms.init_form'))
+    #
+    #     if not current_user.check_password_bezoekende_praktijk(form.ww_bezoekende.data):
+    #         flash("Het wachtwoord van de bezoekende praktijk is fout.")
+    #         redirect(url_for('forms.init_form'))
+    #
+    #     if form.alles_klopt.data:
+    #         return redirect(url_for('forms.form_vragen/praktijk/0'))
+    #     else:
+    #         flash("Uw moet de gegevens bevestigen of wijzigen.")
 
     return render_template("formulieren/init_form.html",
                            title = 'Gegevens check',
