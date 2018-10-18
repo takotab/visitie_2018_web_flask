@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from visitatie.praktijk import Praktijk
 
 # TODO add tests http://flask.pocoo.org/docs/1.0/tutorial/tests/
 
@@ -45,7 +46,7 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
     app.register_blueprint(bp, url_prefix = '/')
     from visitatie.formulieren.routes import bp as form_bp
     app.register_blueprint(form_bp, url_prefix = '/')
-    from visitatie import bp as img_bp
+    from visitatie.img_routes import bp as img_bp
     app.register_blueprint(img_bp, url_prefix = '/')
 
     @app.errorhandler(500)

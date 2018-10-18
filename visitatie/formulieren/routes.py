@@ -1,7 +1,7 @@
 from flask import Blueprint, redirect, render_template, request, flash
 from flask_login import current_user, login_required
 
-from visitatie import GegevensCheck
+from visitatie.formulieren.froms import GegevensCheck
 
 bp = Blueprint("forms", __name__)
 VRAGEN_DCT = {}

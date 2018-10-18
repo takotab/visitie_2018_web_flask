@@ -88,7 +88,7 @@ def change_info():
                            form = form)
 
 from visitatie.forms import ResetPasswordRequestForm
-from visitatie import send_password_reset_email
+from visitatie.email import send_password_reset_email
 
 
 @bp.route('/reset_password_request', methods = ['GET', 'POST'])
