@@ -1,5 +1,4 @@
 import logging
-import click
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
@@ -46,7 +45,7 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
     app.register_blueprint(bp, url_prefix = '/')
     from visitatie.formulieren.routes import bp as form_bp
     app.register_blueprint(form_bp, url_prefix = '/')
-    from visitatie.img_routes import bp as img_bp
+    from visitatie import bp as img_bp
     app.register_blueprint(img_bp, url_prefix = '/')
 
     @app.errorhandler(500)

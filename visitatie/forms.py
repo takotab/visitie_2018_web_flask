@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from flask import current_app
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField, IntegerField
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
 
 from visitatie.data_models import User
-from visitatie.praktijk import Praktijk
+from visitatie import Praktijk
 
 PRAKTIJK = Praktijk()
 

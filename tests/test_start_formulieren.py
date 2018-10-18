@@ -1,5 +1,5 @@
 import pytest
-from visitatie.data_models import User, db
+from visitatie.data_models import User
 
 testdata = [
     ('divera', 'Proos', 'Ptako'),

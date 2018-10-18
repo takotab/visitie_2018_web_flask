@@ -1,11 +1,7 @@
-from flask import Blueprint, redirect, render_template, request, url_for, flash
-from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
-import json
+from flask import Blueprint, redirect, render_template, request, flash
+from flask_login import current_user, login_required
 
-from visitatie import db
-from visitatie.data_models import User
-from visitatie.formulieren.froms import GegevensCheck
+from visitatie import GegevensCheck
 
 bp = Blueprint("forms", __name__)
 VRAGEN_DCT = {}

@@ -1,4 +1,3 @@
-import pytest
 from visitatie.data_models import User
 
 

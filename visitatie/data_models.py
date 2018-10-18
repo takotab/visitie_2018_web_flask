@@ -4,7 +4,7 @@ import jwt
 from flask import current_app
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
-from visitatie.praktijk import Praktijk
+from visitatie import Praktijk
 from visitatie import db, login
 
 PRAKTIJK = Praktijk()
