@@ -1,10 +1,13 @@
-from flask import Blueprint, redirect, render_template, request, flash
+import os
+
+from flask import Blueprint, redirect, render_template, request, flash, send_file
 from flask_login import current_user, login_required
 
-from visitatie.formulieren.froms import GegevensCheck
+from visitatie.formulieren.froms import GegevensCheck, FormNumbers
 
 bp = Blueprint("forms", __name__)
 VRAGEN_DCT = {}
+
 
 @bp.route("/init_form", methods = ['GET', 'POST'])
 @login_required
@@ -67,3 +70,24 @@ def form_praktijk_vragen(type, number):
     return render_template("formulieren/form_praktijk_vragen.html",
                            your_questions = questions,
                            title = title)
+
+
+@bp.route("/form_numbers/<number>", methods = ['GET', 'POST'])
+@login_required
+def form_numbers(number):
+    form = FormNumbers()
+    # TODO handel data
+    title = "Patient " + str(number) + " vragen"
+
+    return render_template("formulieren/from_numbers.html",
+                           form = form,
+                           user = current_user,
+                           title = title)
+
+
+@bp.route('form_numbers/image/<file>', methods = ['GET'])
+def get_file(file = 'Logorugnetwerk.jpg'):
+    if file == 'file':
+        file = 'Logorugnetwerk.jpg'
+    dir = os.path.join("static", file)
+    return send_file(dir)

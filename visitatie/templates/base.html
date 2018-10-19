@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" style="background-color: #eee;">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -16,8 +16,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ url_for('auth.index') }}">
-                    <img src='image/Logorugnetwerk_small.png' class="img-fluid" height="35px"
-                         alt='Start'>
+                    Start
                 </a>
 
             </div>
@@ -69,5 +68,23 @@
 {#            </nav>#}
 
         </div>
+    <div class="w-auto p-3" style="height: 100px"></div>
+    <div class="w-auto p-3" style="height: 100px; background-color: #EEEEEE;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+
+                </div>
+                <div class="col-sm">
+                    <img src="image/Logorugnetwerk.jpg" class="img-fluid"
+                         style="height: 100px"
+                         alt='Start'>
+                </div>
+                <div class="col-sm">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}

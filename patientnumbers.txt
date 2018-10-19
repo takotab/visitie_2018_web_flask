@@ -1,0 +1,10 @@
+VAS-P gem	VAS-P gem	VAS-P min	VAS-P min	VAS-P max	VAS-P max
+PSK 1	PSK 1	PSK 2	PSK 2	PSK 3	PSK 3
+NRS	NRS
+QBPDS	QBPDS
+STarT Back Screening Tool 	STarT Back Screening Tool
+GPE1	GPE2
+Welk ander meetinstrument gebruikt u?
+Anders	Anders
+Aantal Behandelingen
+Wilt u nog een patiënt invoeren?{end}

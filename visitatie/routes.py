@@ -75,7 +75,7 @@ def change_info():
         current_user.name = form.name.data
         current_user.email = form.email.data
         current_user.praktijk = form.praktijk.data
-        current_user.num_therapeuten = form.num_therapeuten.data
+        current_user.num_therapeuten = int(form.num_therapeuten.data)
         db.session.commit()
         flash('Your changes have been saved.')
         return redirect(url_for('auth.user'))
