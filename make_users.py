@@ -1,13 +1,14 @@
 from visitatie import create_app
 import config
+import pandas as pd
 
 
 def main():
-    with open('Results 2017 - Fake.csv') as f:
-        for line in f:
-            print(line)
+    df = pd.read_csv('fake_users.csv')
+    lst_of_users = []
+    for index, row in df.iterrows():
+        lst_of_users.append(row.to_dict())
 
-    lst_of_users = [('takotabak' + str(i), 'takotabak_' + str(i)) for i in range(5)]
     app = create_app(config, users = lst_of_users)
 
 

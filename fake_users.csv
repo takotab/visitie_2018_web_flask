@@ -1,0 +1,24 @@
+naam,Aantal Therapeuten,bezoekende prakijk,bezoekende therapeut code,catagorie,email,naam code,regio
+Fysiotherapiepraktijk Madrid             ,2                 ,7419101           ,741910102                ,Groen    ,     ,7615118  ,1
+Fysio Rome                               ,6                 ,9623113           ,962311301                ,Groen    ,     ,2963117  ,1
+Fysiotherapiepraktijk Nirobi             ,2                 ,1395115           ,139511501                ,Rood     ,     ,7419101  ,1
+Fysiotherapiepraktijk Groningen          ,6                 ,1395115           ,139511501                ,Rood     ,     ,7419101  ,1
+FysiotherapiepraktijkKlaas               ,4                 ,4629109           ,462910901                ,Rood     ,     ,1745102  ,1
+FysiotherapiepraktijkStam                ,3                 ,2963117           ,296311703                ,Groen    ,     ,6487103  ,1
+Fysiotherapiepraktijk Zurich             ,4                 ,1673119           ,167311901                ,Groen    ,     ,2879108  ,1
+FysiotherapiepraktijkNoordWest           ,1                 ,9653111           ,965311101                ,Groen    ,     ,7153104  ,1
+Fysiotherapiepraktijk Fysio Snel         ,7                 ,3241110           ,324111001                ,Groen    ,     ,7139105  ,1
+Fysiotherapiepraktijk Beatrix weg        ,1                 ,7153104           ,715310403                ,Groen    ,     ,1395115  ,1
+Hong Kong                                ,7                 ,1745102           ,174510201                ,Rood     ,     ,9528106  ,1
+Oefentherapie Mensendieck Gale           ,5                 ,2879108           ,287910801                ,Groen    ,     ,3241110  ,1
+Manuele Fysiotherapiepraktijk Bagdad     ,5                 ,9528106           ,952810601                ,Groen    ,     ,1673119  ,1
+Oefentherapie LA                         ,6                 ,7139105           ,713910501                ,Groen    ,     ,9653111  ,1
+Fysio centrum NY                         ,5                 ,6487103           ,648710303                ,Oranje   ,     ,9623113  ,1
+Zorg Fysiotherapie en Mensendieck Atlanta,4                 ,9473107           ,947310701                ,Groen    ,     ,4629109  ,1
+Fysio Manuele Therapie Ankera            ,8                 ,8913212           ,891321202                ,Groen    ,     ,7312202  ,2
+Kaandorp fysiotherapie San Diego         ,6                 ,9784211           ,978421102                ,Groen    ,     ,9416210  ,2
+Fysio DuckDuck                           ,6                 ,7312202           ,731220201                ,Groen    ,     ,4672206  ,2
+Fysiotherapie Gooogle                    ,6                 ,4672206           ,467220605                ,Groen    ,     ,3952205  ,2
+Fysiotherapie Berlijn                    ,7                 ,3952205           ,395220501                ,Rood     ,     ,8913212  ,2
+Gezondheidscentrum Istanbul              ,1                 ,9432204           ,943220401                ,Rood     ,     ,5183201  ,2
+Oefentherapie Being                      ,4                 ,5183201           ,518320101                ,Groen    ,     ,9432204  ,2

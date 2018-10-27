@@ -21,11 +21,12 @@ class User(UserMixin, db.Model):
     num_therapeuten = db.Column(db.Integer)
     bezoekende_praktijk = db.Column(db.String(25), index = True, unique = True)
     te_bezoeken_praktijk = db.Column(db.String(25), index = True, unique = True)
-    vorig_bezoekende_praktijk = db.Column(db.String(25), index = True, unique = True)
-    vorig_te_bezoeken_praktijk = db.Column(db.String(25), index = True, unique = True)
-    vorig_catagorie = db.Column(db.String(25), index = True)
+    vorig_bezoekende_praktijk = db.Column(db.String(25), index = True)
+    vorig_te_bezoeken_praktijk = db.Column(db.String(25), index = True)
+    vorig_catagorie = db.Column(db.String(25), index = True)  # use as current
     vorig_name_code = db.Column(db.String(25), index = True)
     vorig_color = db.Column(db.String(25), index = True)
+    admin = db.Column(db.String(), index = True, default = "False")
 
     def __repr__(self):
         return '<Name {}\tEmail {}\tPraktijk {}\n' \

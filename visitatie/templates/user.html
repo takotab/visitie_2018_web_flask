@@ -16,7 +16,13 @@
             Klik hier om uw profiel te wijzigen.
         </a>
     </p>
+    {% if not_yet_bezoek %}
+        <div>
+            <a>U heeft nog geen bezoeker</a>
+        </div>
+    {% endif %}
     {% for your_list_element in your_list %}
         <p>{{ your_list_element }} </p>
     {% endfor %}
+
 {% endblock %}

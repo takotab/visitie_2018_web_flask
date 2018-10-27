@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField, IntegerField
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
 
@@ -61,3 +61,13 @@ class ResetPasswordForm(FlaskForm):
     password2 = PasswordField(
             'Repeat Password', validators = [DataRequired(), EqualTo('password')])
     submit = SubmitField('Request Password Reset')
+
+
+class AdminForm(FlaskForm):
+    password = PasswordField('Wachtwoord', validators = [DataRequired()])
+    submit = SubmitField('Maak mij Admin')
+
+
+class DecideForm(FlaskForm):
+    regio = IntegerField('Regio', validators = [DataRequired()])
+    submit = SubmitField('Submit')

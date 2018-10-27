@@ -1,10 +1,11 @@
-from flask import Blueprint, redirect, render_template, request, url_for, flash
+from flask import Blueprint, redirect, render_template, request, url_for, flash, current_app
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
+from collections import defaultdict
 
 from visitatie import db
 from visitatie.data_models import User
-from visitatie.forms import LoginForm, RegistrationForm
+from visitatie.forms import LoginForm, RegistrationForm, AdminForm
 
 bp = Blueprint("auth", __name__)
 
@@ -61,7 +62,15 @@ def register():
 @bp.route('/user')
 @login_required
 def user():
-    return render_template('user.html', user = current_user, your_list = [])
+    not_yet_bezoek = False
+    print(repr(current_user.bezoekende_praktijk), "?None")
+
+    if str(current_user.bezoekende_praktijk) == 'None':
+        not_yet_bezoek = True
+    print("not_yet_bezoek", not_yet_bezoek)
+
+    return render_template('user.html', user = current_user, your_list = [],
+                           not_yet_bezoek = not_yet_bezoek)
 
 
 from visitatie.forms import ChangeInfoForm
@@ -123,3 +132,32 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('auth.login'))
     return render_template('reset_password.html', form = form)
+
+
+NUM_TRYS = defaultdict(int)
+
+
+@bp.route('/admin', methods = ['GET', 'POST'])
+@login_required
+def admin():
+    if current_user.admin == 'True':
+        flash("U heeft al admin status.")
+
+    if current_user.id in NUM_TRYS:
+        if NUM_TRYS[current_user.id] > 3:
+            flash("U kunt geen admin worden.")
+            return redirect(url_for('auth.user'))
+
+    form = AdminForm()
+    if form.validate_on_submit():
+        print(current_app.config['ADMIN_PASSWORD'])
+        if form.password.data == current_app.config['ADMIN_PASSWORD']:
+            current_user.admin = 'True'
+            db.session.commit()
+            flash("U heeft nu admin status.")
+            return redirect(url_for('auth.user'))
+        else:
+            NUM_TRYS[current_user.id] += 1
+            flash("Dat is niet het wachtwoord." + str(NUM_TRYS[current_user.id]))
+
+    return render_template('admin.html', form = form)

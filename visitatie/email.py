@@ -9,6 +9,7 @@ from visitatie import mail
 def send_async_email(current_app, msg):
     with current_app.app_context():
         mail.send(msg)
+    print('succesfully send email ')
 
 
 def send_email(subject, sender, recipients, text_body, html_body):

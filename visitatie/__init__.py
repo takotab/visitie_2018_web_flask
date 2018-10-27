@@ -48,6 +48,8 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
     app.register_blueprint(form_bp, url_prefix = '/')
     from visitatie.img_routes import bp as img_bp
     app.register_blueprint(img_bp, url_prefix = '/')
+    from visitatie.admin_routes import bp as ad_bp
+    app.register_blueprint(ad_bp, url_prefix = '/admin/')
 
     @app.errorhandler(500)
     def server_error(e):
@@ -60,12 +62,22 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
         with app.app_context():
             from visitatie.data_models import User
             for user in users:
-                print(user)
-                u = User(username = user,
-                         email = 'susan@example.com',
-                         password_hash = "password_hash",
+                # print(user)
+
+                u = User(vorig_name_code = user['naam code'],
+                         name = "klaas " + str(user['naam code']),
+                         email = "takotabak+" + str(user['naam code']) + '@gmail.com',
+                         password_hash = "_" + str(user['naam code']),
+                         praktijk = user["naam"],
+                         regio = user['regio'],
+                         num_therapeuten = user['Aantal Therapeuten'],
+                         vorig_bezoekende_praktijk = user['bezoekende prakijk'],
+                         vorig_color = user['catagorie'],
                          )
-                db.session.add(u)
-                db.session.commit()
-            print(User.query.all())
+                try:
+                    db.session.add(u)
+                    db.session.commit()
+                except:
+                    print(u, "did not work")
+
     return app

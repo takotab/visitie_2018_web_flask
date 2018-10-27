@@ -25,8 +25,11 @@
 
                     {% if not current_user.is_anonymous %}
                         <li><a href="{{ url_for('auth.user') }}">{{ ("Profiel") }}</a></li>
-
+                        {% if current_user.admin =="True" %}
+                            <li><a href="{{ url_for('admin.admin_decide') }}">{{ ("Admin") }}</a></li>
+                        {% endif %}
                     {% endif %}
+
 
                 </ul>
 
