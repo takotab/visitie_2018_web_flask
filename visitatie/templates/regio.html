@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>{{ title }}</h1>
+    <div class="form-group">
+        {% for id, going_to, exclude in user %}
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                           aria-label="Recipient's username" aria-describedby="button-addon2">
+                    {% if exclude %}
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn btn-danger" type="button" id="button-addon2">
+                                Exclude
+                            </button>
+                        </div>
+                    {% else %}
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                Exclude
+                            </button>
+                        </div>
+                    {% endif %}
+                </div>
+            </li>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

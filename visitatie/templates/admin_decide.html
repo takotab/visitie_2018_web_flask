@@ -8,4 +8,11 @@
             {{ wtf.quick_form(form) }}
         </div>
     </div>
+    {% if not(return_str == "") %}
+        <div>
+            <h3>De indeling:</h3>
+            {{ return_str }}
+        </div>
+
+    {% endif %}
 {% endblock %}

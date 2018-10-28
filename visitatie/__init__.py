@@ -63,13 +63,15 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
             from visitatie.data_models import User
             for user in users:
                 # print(user)
+                while user['naam'][-1] == " ":
+                    user['naam'] = user['naam'][:-1]
 
                 u = User(vorig_name_code = user['naam code'],
-                         name = "klaas " + str(user['naam code']),
+                         name = "klaas jan" + str(user['naam code']),
                          email = "takotabak+" + str(user['naam code']) + '@gmail.com',
                          password_hash = "_" + str(user['naam code']),
                          praktijk = user["naam"],
-                         regio = user['regio'],
+                         regio = int(user['regio']),
                          num_therapeuten = user['Aantal Therapeuten'],
                          vorig_bezoekende_praktijk = user['bezoekende prakijk'],
                          vorig_color = user['catagorie'],
@@ -77,7 +79,11 @@ def create_app(config, debug = False, testing = False, config_overrides = None,
                 try:
                     db.session.add(u)
                     db.session.commit()
-                except:
+                except Exception as e:
+                    print(e)
                     print(u, "did not work")
+                    db.session.rollback()
+                    print("\n\n\n")
+
 
     return app

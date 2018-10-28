@@ -1,6 +1,7 @@
 from flask_wtf import FlaskForm, RecaptchaField
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, SelectField, IntegerField
 from wtforms.validators import ValidationError, Email, EqualTo, DataRequired
+from flask import current_app
 
 from visitatie.data_models import User
 from visitatie import Praktijk
@@ -69,5 +70,8 @@ class AdminForm(FlaskForm):
 
 
 class DecideForm(FlaskForm):
-    regio = IntegerField('Regio', validators = [DataRequired()])
+    # TODO fake account
+
+    regio = SelectField('Regio', choices = [(str(obj), obj) for obj in [1, 2, 3]],
+                        validators = [DataRequired()])
     submit = SubmitField('Submit')
