@@ -1,6 +1,6 @@
 import os
 
-from flask import Blueprint, redirect, render_template, request, flash, send_file
+from flask import Blueprint, redirect, render_template, request, flash, send_file, url_for
 from flask_login import current_user, login_required
 
 from visitatie.formulieren.froms import GegevensCheck, FormNumbers
@@ -15,20 +15,28 @@ def init_form():
     print('load', list(request.args.keys()))
     for key in request.args.keys():
         print(key, request.args.get(key))
+    print(current_user.fake_account)
+    if str(current_user.fake_account) == "True":
+        flash("Het wachtwoord van 'Duckstad health centrum' is 'DonaldDuck123'.")
     form = GegevensCheck()
-    # if form.validate_on_submit():
-    #     if not current_user.check_password(form.ww_current_user.data):
-    #         flash("Uw eigen wachtwoord is fout.")
-    #         redirect(url_for('forms.init_form'))
-    #
-    #     if not current_user.check_password_bezoekende_praktijk(form.ww_bezoekende.data):
-    #         flash("Het wachtwoord van de bezoekende praktijk is fout.")
-    #         redirect(url_for('forms.init_form'))
-    #
-    #     if form.alles_klopt.data:
-    #         return redirect(url_for('forms.form_vragen/praktijk/0'))
-    #     else:
-    #         flash("Uw moet de gegevens bevestigen of wijzigen.")
+    if form.validate_on_submit():
+        if not current_user.check_password(form.ww_current_user.data):
+            flash("Uw eigen wachtwoord is fout.")
+            redirect(url_for('forms.init_form'))
+
+        if current_user.fake_account == "True":
+            if form.ww_bezoekende.data is not 'DonaldDuck123':
+                flash("Het wachtwoord van de bezoekende praktijk is fout.")
+                redirect(url_for('forms.init_form'))
+        else:
+            if not current_user.check_password_bezoekende_praktijk(form.ww_bezoekende.data):
+                flash("Het wachtwoord van de bezoekende praktijk is fout.")
+                redirect(url_for('forms.init_form'))
+
+        if form.alles_klopt.data:
+            return redirect(url_for('forms.form_vragen/praktijk/0'))
+        else:
+            flash("Uw moet de gegevens bevestigen of wijzigen.")
 
     return render_template("formulieren/init_form.html",
                            title = 'Gegevens check',

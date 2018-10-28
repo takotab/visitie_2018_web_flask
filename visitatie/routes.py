@@ -50,12 +50,16 @@ def register():
         user = User(name = form.name.data,
                     email = form.email.data,
                     praktijk = form.praktijk.data,
+                    fake_account = "True",
+                    bezoekende_praktijk = "Duckstad health centrum",
+                    te_bezoeken_praktijk = "Fysio DuckDuckGo",
                     )
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('auth.login'))
+
     return render_template('register.html', title = 'Register', form = form)
 
 

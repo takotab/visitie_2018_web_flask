@@ -38,7 +38,7 @@ class ChangeInfoForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     name = StringField('Volledige naam', validators = [DataRequired()])
     email = StringField('Email', validators = [DataRequired(), Email()])
-    praktijk = SelectField('Praktijk', choices = PRAKTIJK.get_tuple(),
+    praktijk = SelectField('Praktijk', choices = [("Fysio Duckstad", "Fysio Duckstad")],
                            validators = [DataRequired()])
     password = PasswordField('Password', validators = [DataRequired()])
     password2 = PasswordField(

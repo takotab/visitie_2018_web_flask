@@ -27,7 +27,7 @@ class User(UserMixin, db.Model):
     vorig_name_code = db.Column(db.String(25), index = True)
     vorig_color = db.Column(db.String(25), index = True)
     admin = db.Column(db.String(), index = True, default = "False")
-    fake_account = db.Column(db.String(), index = True, default = "True")
+    fake_account = db.Column(db.String(), index = True, default = "False")
 
     def __repr__(self):
         return '<Name {}\tEmail {}\tPraktijk {}\n' \
@@ -51,10 +51,18 @@ class User(UserMixin, db.Model):
         return self.praktijk
 
     def get_bezoekende_praktijk(self):
-        return self.bezoekende_praktijk
+        if self.bezoekende_praktijk == "Duckstad health centrum":
+            return self.bezoekende_praktijk
+        bezoekende_user = User.query.filter_by(
+                vorig_name_code = self.bezoekende_praktijk).first()
+        return bezoekende_user.praktijk
 
     def get_te_bezoeken_praktijk(self):
-        return self.te_bezoeken_praktijk
+        if self.te_bezoeken_praktijk == "Fysio DuckDuckGo":
+            return self.te_bezoeken_praktijk
+        te_bezoeken_praktijk = User.query.filter_by(
+                vorig_name_code = self.te_bezoeken_praktijk).first()
+        return te_bezoeken_praktijk.praktijk
 
     def check_password_bezoekende_praktijk(self, password):
         bezoekende_user = User.query.filter_by(praktijk = self.bezoekende_praktijk).first()

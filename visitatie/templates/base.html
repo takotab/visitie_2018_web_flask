@@ -49,6 +49,13 @@
 
 {% block content %}
     <div class="container">
+        {% if not current_user.is_anonymous %}
+            {% if current_user.fake_account == "True" %}
+                <div class="alert alert-info" role="alert">
+                    U heeft een proef account.
+                </div>
+            {% endif %}
+        {% endif %}
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -57,20 +64,9 @@
             {% endif %}
         {% endwith %}
 
-        {# application content needs to be provided in the app_content block #}
         {% block app_content %}{% endblock %}
 
-{#        <div></div>#}
-{#        <div></div>#}
-{#        <div class="fixed-bottom">#}
-{#            <nav aria-label="breadcrumb">#}
-{#                <ol class="breadcrumb">#}
-{##}
-{##}
-{#                </ol>#}
-{#            </nav>#}
-
-        </div>
+    </div>
     <div class="w-auto p-3" style="height: 100px"></div>
     <div class="w-auto p-3" style="height: 100px; background-color: #EEEEEE;">
         <div class="container">
