@@ -5,7 +5,6 @@ print("start")
 
 
 class IndelingSystem:
-
     def __init__(self, list_of_users):
         self.list_of_users = list_of_users
         self.all_users = list(list_of_users.keys())
@@ -21,9 +20,9 @@ class IndelingSystem:
             possibilitys = self.succesor(key)
             going_to = random.sample(possibilitys, 1)[0]
 
-            self.list_of_users[key]['going_to'] = going_to
+            self.list_of_users[key]["going_to"] = going_to
             #             print("bezocht",self.list_of_users[key])
-            self.list_of_users[going_to]['constraint'].append(key)
+            self.list_of_users[going_to]["constraint"].append(key)
             self.nog_in_te_delen.remove(going_to)
 
     #             print(key ," will go to ", going_to,'\n',self.nog_in_te_delen)
@@ -43,10 +42,10 @@ class IndelingSystem:
 
     def goal(self):
         bezocht = []
-        print('\n\n checking')
+        print("\n\n checking")
         for key in self.list_of_users:
-            to_ = self.list_of_users[key]['going_to']
-            if to_ in self.list_of_users[key]['constraint']:
+            to_ = self.list_of_users[key]["going_to"]
+            if to_ in self.list_of_users[key]["constraint"]:
                 return False
             else:
                 pass
@@ -62,7 +61,7 @@ class IndelingSystem:
             for by in self.all_users:
                 #                 print(by)
                 if self.list_of_users[by]["going_to"] == key:
-                    self.list_of_users[key]['by'] = by
+                    self.list_of_users[key]["by"] = by
                     break
 
 
@@ -74,7 +73,7 @@ def make_indeling(list_of_users):
             indeling = IndelingSystem(list_of_users)
             indeling.deel_in()
             if indeling.goal():
-                print('succes')
+                print("succes")
                 good = True
         except Exception as e:
             if e is not "Sample larger than population or is negative":
@@ -88,7 +87,13 @@ def make_indeling(list_of_users):
             break
 
     indeling.find_by_whom()
-    ouput_str = str({key[-3:]: {"to": indeling.list_of_users[key]["going_to"][-3:],
-                                "by": indeling.list_of_users[key]["by"][-3:]}
-                     for key in indeling.list_of_users})
+    ouput_str = str(
+        {
+            key[-3:]: {
+                "to": indeling.list_of_users[key]["going_to"][-3:],
+                "by": indeling.list_of_users[key]["by"][-3:],
+            }
+            for key in indeling.list_of_users
+        }
+    )
     return indeling.list_of_users, ouput_str
